@@ -1,0 +1,28 @@
+{% extends "base.html" %} 
+{% block title %}datadump{% endblock %}
+
+{% block content %}
+<br />
+<h3 align="center">Archive data</h3>
+<br />
+<div class="table-responsive">
+    <table class="table table-striped ">
+        <thead class="thead-primary">
+            <tr>
+                {% for column_name in column_names %}
+                    <th>{{ column_name }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in datadump %}
+                <tr>
+                    {% for item in row %}
+                        <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

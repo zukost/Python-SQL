@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block title %}Gordon growth model{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <br />
+    <h3 align="center">Gordon Growth Model Calculator</h3>
+    <div class="form-group">
+        <label for="companyname">Company name</label>
+        <input type="companyname" class="form-control" id="companyname" name="companyname" placeholder="Enter company name"
+        />    
+    </div>
+    <div class="form-group">
+        <label for="dividend_date">Dividend date</label>
+        <input type="dividend_date" class="form-control" id="dividend_date" name="dividend_date" placeholder="Enter dividend date as dd.mm.yyyy"
+        />    
+    </div>
+    <div class="form-group">
+        <label for="dividend">Dividend</label>
+        <input type="dividend" class="form-control" id="dividend" name="dividend" placeholder="Enter dividend"
+        />    
+    </div>
+    <div class="form-group">
+        <label for="growth_rate">Growth rate</label>
+        <input type="growth_rate" class="form-control" id="growth_rate" name="growth_rate" placeholder="Enter growth rate"
+        />    
+    </div>
+    <div class="form-group">
+        <label for="current_date">Current date</label>
+        <input type="current_date" class="form-control" id="current_date" name="current_date" placeholder="Enter current date as dd.mm.yyyy"
+        />    
+    </div>
+    <div class="form-group">
+        <label for="discount_rate">Discount rate</label>
+        <input type="discount_rate" class="form-control" id="discount_rate" name="discount_rate" placeholder="Enter discount rate"
+        />    
+    </div>
+    <div class="form-group">
+        <label for="current_price">Current price</label>
+        <input type="current_price" class="form-control" id="current_price" name="current_price" placeholder="Enter current price"
+        />    
+    </div>
+    <div class="form-group">
+        <label for="currency">Currency</label>
+        <input type="currency" class="form-control" id="currency" name="currency" placeholder="Enter currency"
+        />    
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Calculate</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+</form>
+{% endblock %}

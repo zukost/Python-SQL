@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}Godron result{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('auth.Gordon_growth_model') }}" method="POST">
+    <br />
+    <h3 align="center">Gordon Growth Model Result</h3>
+    <br />
+    <p>The fairprice of the stock is: {{ fairprice }}</p>
+    <br />
+    <p>If you have a conservative approach you should: {{ conservative_approach }}</p>
+    <br />
+    <p>If you have a neutral approach you should: {{ neutral_approach }}</p>
+    <br />
+    <p>If you have a aggresive approach you should: {{ aggresive_approach }}</p>
+    <br />
+    <button type="submit" class="btn btn-primary">Recalculate</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block title %}statistics{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('auth.statistics') }}" method="GET">
+    <br />
+    <h3 align="left">Number of calculations: {{ INPUTY }}</h3>
+    <br />
+    <h3 align="left">Differences between Fair Price and Current Price by currency</h3>
+    <br />
+    <table>
+        <tr>
+            <th>Currency</th>
+            <th>Difference</th>
+        </tr>
+        {% for row in value_diff %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table> 
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+tr:hover {
+    background-color: #f2f2f2;
+}
+th {
+    text-align: center;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    table {
+        font-size: 0.8em;
+    }
+    th, td {
+        padding: 2px;
+    }
+}
+</style>
+    <br />
+    <br />
+    <h3 align="left">Which currency is the most popular?</h3>
+    <img src = "{{ url_for('static', filename='graph.png') }}">
+</form>
+
+{% endblock %}
